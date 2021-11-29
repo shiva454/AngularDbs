@@ -1,0 +1,18 @@
+<table class="table tbl-striped">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>DATE</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <td>{{p.id}}</td>
+            <td>{{p.name|uppercase}}</td>
+            <td>{{p.price|currency}}</td>
+        
+            <td><button class="btn btn=primary" 
+                (click)="addToCart(p)">Add to Cart</button></td>
+        </tr>
+    </tbody>
+</table>
